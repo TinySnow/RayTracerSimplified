@@ -137,4 +137,12 @@ vector3 &vector3::operator/=(const double t) {
     return *this *= 1 / t;
 }
 
+void vector3::write_color(std::ostream &out) {
+    // 写入每个值映射在 [0, 255] 区间范围内的颜色组件
+    out << static_cast<int>(255.999 * e[0]) << ' '
+        << static_cast<int>(255.999 * e[1]) << ' '
+        << static_cast<int>(255.999 * e[2]) << '\n';
+
+}
+
 

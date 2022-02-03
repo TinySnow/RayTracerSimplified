@@ -33,6 +33,8 @@ public:
 
     double length_squared() const;
 
+    void write_color(std::ostream &out);
+
     /* 以下运算符重载暂不说明 */
 
     vector3 operator-() const;
