@@ -3,4 +3,4 @@ project(RayTracerSimplified)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(RayTracerSimplified src/main.cpp src/core/vector3.cpp src/core/vector3.h)
+add_executable(RayTracerSimplified src/main.cpp src/core/vector3.cpp src/core/vector3.h src/core/ray.cpp src/core/ray.h)
