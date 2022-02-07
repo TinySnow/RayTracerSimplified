@@ -16,14 +16,27 @@
 double hit_sphere(const point3 &center, double radius, const ray &r) {
     // 球心到坐标原点的向量，即 A-C，C 为球心坐标
     vector3 oc = r.get_origin() - center;
-    // 光线方向向量的点乘，即 b·b
-    auto a = dot(r.get_direction(), r.get_direction());
-    // 计算 b·(A-C)
-    auto b = 2.0 * dot(oc, r.get_direction());
-    // 计算 (A-C)·(A-C) - r^2
-    auto c = dot(oc, oc) - radius * radius;
-    auto discriminant = b * b - 4 * a * c;
-    return discriminant < 0 ? -1.0 : (-b - sqrt(discriminant)) / (2.0 * a);
+//    // 光线方向向量的点乘，即 b·b
+//    auto a = dot(r.get_direction(), r.get_direction());
+//    // 计算 b·(A-C)
+//    auto b = 2.0 * dot(oc, r.get_direction());
+//    // 计算 (A-C)·(A-C) - r^2
+//    auto c = dot(oc, oc) - radius * radius;
+//    auto discriminant = b * b - 4 * a * c;
+//    return discriminant < 0 ? -1.0 : (-b - sqrt(discriminant)) / (2.0 * a);
+    // 以下代码是根据代数方法简化判别式
+    // 假设 b 有一个系数 2，则：b = 2h，那么，
+    /**          /`````````````````                  /`````````````````
+     *  - b ±   /   b^2  - 4 * a * c        - h  ±  /  h^2 - a * c
+     *        \/                                  \/
+     *  ---------------------------   =    -----------------------------
+     *            2a                                    a
+     */
+    auto a = r.get_direction().length_squared();
+    auto half_b = dot(oc, r.get_direction());
+    auto c = oc.length_squared() - radius * radius;
+    auto discriminant = half_b * half_b - a * c;
+    return discriminant < 0 ? -1.0 : (-half_b - sqrt(discriminant)) / a;
 }
 
 /**
