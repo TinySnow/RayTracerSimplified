@@ -3,6 +3,31 @@
 #include "core/ray.h"
 
 /**
+ * 根据直线与球在直角坐标系中的方程，联立求解得到的式子：<p>
+ * t^2 * (b·b) + 2t * b·(A-C) + (A-C)·(A-C) - r^2 = 0<p>
+ * 之所以会得到这个式子，是因为我们把三个维的坐标值与直线的解析方程 用 直线到球心的距离与半径的大小 进行了替换。<p>
+ * 不这样做会非常麻烦，然后根据求根公式判断有没有根，判断光线能不能击中球体。<p>
+ * 注意：传参时传入球心，因为每个球的球心不一定在坐标系的原点。
+ * @param center 球心坐标
+ * @param radius 半径大小
+ * @param r 光线向量方程
+ * @return
+ */
+bool hit_sphere(const point3 &center, double radius, const ray &r) {
+    // 球心到坐标原点的向量，即 A-C，C 为球心坐标
+    vector3 oc = r.get_origin() - center;
+    // 光线方向向量的点乘，即 b·b
+    auto a = dot(r.get_direction(), r.get_direction());
+    // 计算 b·(A-C)
+    auto b = 2.0 * dot(oc, r.get_direction());
+    // 计算 (A-C)·(A-C) - r^2
+    auto c = dot(oc, oc) - radius * radius;
+    // 计算判别式，其实最后可以和 return 合并，但是这样逻辑更清晰
+    auto discriminant = b * b - 4 * a * c;
+    return (discriminant > 0);
+}
+
+/**
  * 计算该光线位置的颜色，根据 y 值将蓝白做线性差值的混合。<p>
  * 把射线做单位化, 以保证 y 的取值范围 -1.0 < y < 1.0，并将 y 的范围从 -1.0 ≤ y ≤ 1.0 映射到 0 ≤ y ≤ 1.0。
  * 这样 t = 1.0 时就是蓝色, 而 t = 0.0 时就是白色。<p>
@@ -13,6 +38,10 @@
  * @return 颜色值
  */
 color ray_color(const ray &r) {
+    if (hit_sphere(point3(0, 0, -1), 0.5, r)) {
+        // 如果击中了，返回红色这个颜色值用来表示
+        return {1, 0, 0};
+    }
     // 获取方向向量的方向上的单位向量
     vector3 unit_direction = unit_vector(r.get_direction());
     auto t = 0.5 * (unit_direction.y() + 1.0);
