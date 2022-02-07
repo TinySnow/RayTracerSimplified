@@ -35,7 +35,9 @@ bool sphere::hit(const ray &r, double t_min, double t_max, hit_record &rec) cons
     // 计算该光线，存入结构体
     rec.p = r.at(rec.t);
     // 计算面法相向量，存入结构体
-    rec.normal = (rec.p - center) / radius;
+//    rec.normal = (rec.p - center) / radius;
+    vector3 outward_normal = (rec.p - center) / radius;
+    rec.set_face_normal(r, outward_normal);
 
     return true;
 }
