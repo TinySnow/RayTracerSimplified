@@ -11,9 +11,9 @@
  * @param center 球心坐标
  * @param radius 半径大小
  * @param r 光线向量方程
- * @return
+ * @return 根的大小
  */
-bool hit_sphere(const point3 &center, double radius, const ray &r) {
+double hit_sphere(const point3 &center, double radius, const ray &r) {
     // 球心到坐标原点的向量，即 A-C，C 为球心坐标
     vector3 oc = r.get_origin() - center;
     // 光线方向向量的点乘，即 b·b
@@ -22,9 +22,8 @@ bool hit_sphere(const point3 &center, double radius, const ray &r) {
     auto b = 2.0 * dot(oc, r.get_direction());
     // 计算 (A-C)·(A-C) - r^2
     auto c = dot(oc, oc) - radius * radius;
-    // 计算判别式，其实最后可以和 return 合并，但是这样逻辑更清晰
     auto discriminant = b * b - 4 * a * c;
-    return (discriminant > 0);
+    return discriminant < 0 ? -1.0 : (-b - sqrt(discriminant)) / (2.0 * a);
 }
 
 /**
@@ -38,13 +37,20 @@ bool hit_sphere(const point3 &center, double radius, const ray &r) {
  * @return 颜色值
  */
 color ray_color(const ray &r) {
-    if (hit_sphere(point3(0, 0, -1), 0.5, r)) {
-        // 如果击中了，返回红色这个颜色值用来表示
-        return {1, 0, 0};
+    // 返回根的大小，这个根是上述直线与球体相交得出来的解，它的值是用来确定光线 origin + t * direction 的具体位置的
+    // 当然这个前提是有解，如果无解，直接跳过着色这一步就好
+    auto t = hit_sphere(point3(0, 0, -1), 0.5, r);
+    if (t > 0.0) {
+        // 求出具体光线，到球心的距离，然后根据这个结果求得面法向量
+        vector3 N = unit_vector(r.at(t) - vector3(0, 0, -1));
+        // 根据法向量的大小位置偏差，对其上色
+        // 法线向量越长，说明光线离球体我们的视线越平行，越接近视平面
+        // 法线向量越短，说明光线越偏离我们的视平面
+        return 0.5 * color(N.x() + 1, N.y() + 1, N.z() + 1);
     }
     // 获取方向向量的方向上的单位向量
     vector3 unit_direction = unit_vector(r.get_direction());
-    auto t = 0.5 * (unit_direction.y() + 1.0);
+    t = 0.5 * (unit_direction.y() + 1.0);
     return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
 
