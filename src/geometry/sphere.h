@@ -7,6 +7,7 @@
 
 #include "../core/renderable.h"
 #include "../core/vector3.h"
+#include "../core/material.h"
 
 class sphere : public renderable {
 public:
@@ -18,6 +19,11 @@ public:
      * 球体半径值。
      */
     double radius;
+    /**
+     * 材质有关的指针。<p>
+     * 所有同一个材质的物体，共享一个指针。
+     */
+    shared_ptr<material> material_ptr;
 
 public:
     /**
@@ -30,7 +36,7 @@ public:
      * @param cen 球体球心坐标点
      * @param r 球体半径值
      */
-    sphere(vector3 cen, double r);
+    sphere(vector3 cen, double r,shared_ptr<material>);
 
     /**
      * 继承自 renderable 的虚函数，用于计算光线和 renderable 对象是否击中。

@@ -85,7 +85,7 @@ color ray_color(const ray &r, const renderable &world, int depth) {
         return {0, 0, 0};
     };
 
-    if (world.hit(r, 0, infinity, rec)) {
+    if (world.hit(r, 0.001, infinity, rec)) {
 //        return 0.5 * (rec.normal + color(1, 1, 1));
         point3 target = rec.p + rec.normal + random_in_unit_sphere();
         // 请注意，此处开始递归计算

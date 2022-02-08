@@ -7,7 +7,9 @@
 
 #include "ray.h"
 #include "vector3.h"
-
+#include "material.h"
+#include "../util/utils.h"
+class material;
 /**
  * 此结构体用于记录光线与球体相互作用产生的信息。
  */
@@ -30,6 +32,7 @@ struct hit_record {
      * 是否从外侧射入球体。<p>
      */
     bool front_face;
+    shared_ptr<material> material_ptr;
 
     /**
      * 此内联函数决定了面法相向量的方向。依据是是否从外侧射入球体。<p>
