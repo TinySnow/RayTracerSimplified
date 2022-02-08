@@ -70,6 +70,24 @@ public:
      */
     void write_color(std::ostream &out, int samples_per_pixel);
 
+    /**
+     * 生成任意随机数，用该随机数生成坐标点
+     * @return 坐标点
+     */
+    inline static vector3 random() {
+        return {random_double(), random_double(), random_double()};
+    }
+
+    /**
+     * 生成受限于区间内的随机数，用该随机数生成坐标点
+     * @param min 区间下限
+     * @param max 区间上限
+     * @return 区间内坐标点
+     */
+    inline static vector3 random(double min, double max) {
+        return {random_double(min, max), random_double(min, max), random_double(min, max)};
+    }
+
     /* 以下运算符重载暂不说明 */
 
     vector3 operator-() const;
@@ -155,5 +173,11 @@ inline vector3 cross(const vector3 &u, const vector3 &v) {
 inline vector3 unit_vector(vector3 v) {
     return v / v.length();
 }
+
+/**
+ * 此函数用于从相切的单位圆内选出一点，作为漫反射的目的点
+ * @return 返回该目标点
+ */
+vector3 random_in_unit_sphere();
 
 #endif //RAYTRACERSIMPLIFIED_VECTOR3_H

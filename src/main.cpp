@@ -75,12 +75,21 @@ double hit_sphere(const point3 &center, double radius, const ray &r) {
  * 与上一般几乎一致，多了一个参数 world，该参数是场景里需要渲染的几何体集合
  * @param r 光线的向量方程
  * @param world 需要渲染的几何体集合，也即场景
+ * @param depth 允许递归的最大深度
  * @return 返回颜色
  */
-color ray_color(const ray &r, const renderable &world) {
+color ray_color(const ray &r, const renderable &world, int depth) {
     hit_record rec;
+    // 如果到达深度极限，则说明光线已经不能反射，只能被吸收，被吸收的光线看起来是黑色的，所以返回黑色
+    if (depth <= 0) {
+        return {0, 0, 0};
+    };
+
     if (world.hit(r, 0, infinity, rec)) {
-        return 0.5 * (rec.normal + color(1, 1, 1));
+//        return 0.5 * (rec.normal + color(1, 1, 1));
+        point3 target = rec.p + rec.normal + random_in_unit_sphere();
+        // 请注意，此处开始递归计算
+        return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
     }
     vector3 unit_direction = unit_vector(r.get_direction());
     auto t = 0.5 * (unit_direction.y() + 1.0);
@@ -100,11 +109,13 @@ int main() {
     // 定义图像分辨率，不选取正方形是因为会搞混长和宽
     const auto aspect_ratio = 16.0 / 9.0;
     // 定义图像高度
-    const int image_height = 900;
+    const int image_height = 450;
     // 定义图像宽度
     const int image_width = static_cast<int>(image_height * aspect_ratio);
 
     const int samples_per_pixel = 100;
+    // 限定递归最大深度
+    const int max_depth = 50;
 
     camera camera;
     // 渲染
@@ -126,7 +137,7 @@ int main() {
                 auto u = (i + random_double()) / (image_width - 1);
                 auto v = (j + random_double()) / (image_height - 1);
                 ray r = camera.get_ray(u, v);
-                pixel_color += ray_color(r, world);
+                pixel_color += ray_color(r, world, max_depth);
             }
             pixel_color.write_color(std::cout, samples_per_pixel);
         }

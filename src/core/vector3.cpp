@@ -58,4 +58,13 @@ void vector3::write_color(std::ostream &out, int samples_per_pixel) {
 
 }
 
+vector3 random_in_unit_sphere() {
+    while (true) {
+        // 受限于区间内的坐标点
+        auto p = vector3::random(-1, 1);
+        // 如果长度大于 1，说明不在单位球内，重新生成
+        if (p.length_squared() >= 1) continue;
+        return p;
+    }
+}
 

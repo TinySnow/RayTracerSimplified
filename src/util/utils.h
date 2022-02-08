@@ -43,6 +43,18 @@ inline double random_double() {
     return distribution(generator);
 }
 /**
+ * 生成在区间范围内的随机数
+ * @param min 区间下限
+ * @param max 区间上限
+ * @return 随机数
+ */
+inline double random_double(double min, double max) {
+    static std::uniform_real_distribution<double> distribution(min, max);
+    static std::mt19937 generator;
+    return distribution(generator);
+}
+
+/**
  * 将 x 的值限制在区间范围内
  * @param x 需要限制的值
  * @param min 区间下限
