@@ -1,6 +1,9 @@
 #include <iostream>
 #include "core/vector3.h"
 #include "core/ray.h"
+#include "core/renderable_list.h"
+#include "geometry/sphere.h"
+#include "util/utils.h"
 
 /**
  * 根据直线与球在直角坐标系中的方程，联立求解得到的式子：<p>
@@ -39,37 +42,59 @@ double hit_sphere(const point3 &center, double radius, const ray &r) {
     return discriminant < 0 ? -1.0 : (-half_b - sqrt(discriminant)) / a;
 }
 
+///**
+// * 计算该光线位置的颜色，根据 y 值将蓝白做线性差值的混合。<p>
+// * 把射线做单位化, 以保证 y 的取值范围 -1.0 < y < 1.0，并将 y 的范围从 -1.0 ≤ y ≤ 1.0 映射到 0 ≤ y ≤ 1.0。
+// * 这样 t = 1.0 时就是蓝色, 而 t = 0.0 时就是白色。<p>
+// * 在蓝白之间生成混合效果(blend)，采用线性混合(linear blend)或者说线性插值(liner interpolation)<p>
+// * 一般来讲公式如下：<p>
+// * <code><b> blendedValue = (1 - t ) * startValue + t * endValue </b></code>
+// * @param r 需要计算颜色的光线向量
+// * @return 颜色值
+// */
+//color ray_color(const ray &r) {
+//    // 返回根的大小，这个根是上述直线与球体相交得出来的解，它的值是用来确定光线 origin + t * direction 的具体位置的
+//    // 当然这个前提是有解，如果无解，直接跳过着色这一步就好
+//    auto t = hit_sphere(point3(0, 0, -1), 0.5, r);
+//    if (t > 0.0) {
+//        // 求出具体光线，到球心的距离，然后根据这个结果求得面法向量
+//        vector3 N = unit_vector(r.at(t) - vector3(0, 0, -1));
+//        // 根据法向量的大小位置偏差，对其上色
+//        // 法线向量越长，说明光线离球体我们的视线越平行，越接近视平面
+//        // 法线向量越短，说明光线越偏离我们的视平面
+//        return 0.5 * color(N.x() + 1, N.y() + 1, N.z() + 1);
+//    }
+//    // 获取方向向量的方向上的单位向量
+//    vector3 unit_direction = unit_vector(r.get_direction());
+//    t = 0.5 * (unit_direction.y() + 1.0);
+//    return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
+//}
+
 /**
- * 计算该光线位置的颜色，根据 y 值将蓝白做线性差值的混合。<p>
- * 把射线做单位化, 以保证 y 的取值范围 -1.0 < y < 1.0，并将 y 的范围从 -1.0 ≤ y ≤ 1.0 映射到 0 ≤ y ≤ 1.0。
- * 这样 t = 1.0 时就是蓝色, 而 t = 0.0 时就是白色。<p>
- * 在蓝白之间生成混合效果(blend)，采用线性混合(linear blend)或者说线性插值(liner interpolation)<p>
- * 一般来讲公式如下：<p>
- * <code><b> blendedValue = (1 - t ) * startValue + t * endValue </b></code>
- * @param r 需要计算颜色的光线向量
- * @return 颜色值
+ * 与上一般几乎一致，多了一个参数 world，该参数是场景里需要渲染的几何体集合
+ * @param r 光线的向量方程
+ * @param world 需要渲染的几何体集合，也即场景
+ * @return 返回颜色
  */
-color ray_color(const ray &r) {
-    // 返回根的大小，这个根是上述直线与球体相交得出来的解，它的值是用来确定光线 origin + t * direction 的具体位置的
-    // 当然这个前提是有解，如果无解，直接跳过着色这一步就好
-    auto t = hit_sphere(point3(0, 0, -1), 0.5, r);
-    if (t > 0.0) {
-        // 求出具体光线，到球心的距离，然后根据这个结果求得面法向量
-        vector3 N = unit_vector(r.at(t) - vector3(0, 0, -1));
-        // 根据法向量的大小位置偏差，对其上色
-        // 法线向量越长，说明光线离球体我们的视线越平行，越接近视平面
-        // 法线向量越短，说明光线越偏离我们的视平面
-        return 0.5 * color(N.x() + 1, N.y() + 1, N.z() + 1);
+color ray_color(const ray &r, const renderable &world) {
+    hit_record rec;
+    if (world.hit(r, 0, infinity, rec)) {
+        return 0.5 * (rec.normal + color(1, 1, 1));
     }
-    // 获取方向向量的方向上的单位向量
     vector3 unit_direction = unit_vector(r.get_direction());
-    t = 0.5 * (unit_direction.y() + 1.0);
+    auto t = 0.5 * (unit_direction.y() + 1.0);
     return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
 
 int main() {
     // 重定义输出位置
     freopen("../src/image.ppm", "w", stdout);
+
+    // 为场景添加需要渲染的几何体
+    renderable_list world;
+    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
+    world.add(make_shared<sphere>(point3(0, -100.5, -1), 100));
+
 
     // 定义图像分辨率，不选取正方形是因为会搞混长和宽
     const auto aspect_ratio = 16.0 / 9.0;
@@ -104,7 +129,7 @@ int main() {
             // 构造 端点为坐标原点，
             // 方向向量为 从左下角点坐标 和 目前循环到的图像上的点 两者计算得到的点位置 减去原点得到的向量
             ray r(origin, lower_left_corner + u * horizontal + v * vertical - origin);
-            color pixel_color = ray_color(r);
+            color pixel_color = ray_color(r, world);
             pixel_color.write_color(std::cout);
         }
     }
