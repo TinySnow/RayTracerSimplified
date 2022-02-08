@@ -46,11 +46,15 @@ vector3 &vector3::operator/=(const double t) {
     return *this *= 1 / t;
 }
 
-void vector3::write_color(std::ostream &out) {
+void vector3::write_color(std::ostream &out, int samples_per_pixel) {
+    auto scale = 1.0 / samples_per_pixel;
+    auto r = scale * e[0];
+    auto g = scale * e[1];
+    auto b = scale * e[2];
     // 写入每个值映射在 [0, 255] 区间范围内的颜色组件
-    out << static_cast<int>(255.999 * e[0]) << ' '
-        << static_cast<int>(255.999 * e[1]) << ' '
-        << static_cast<int>(255.999 * e[2]) << '\n';
+    out << static_cast<int>(256 * clamp(r, 0.0, 0.999)) << ' '
+        << static_cast<int>(256 * clamp(g, 0.0, 0.999)) << ' '
+        << static_cast<int>(256 * clamp(b, 0.0, 0.999)) << '\n';
 
 }
 

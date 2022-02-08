@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <cmath>
+#include "../util/utils.h"
 
 using std::sqrt;
 
@@ -65,8 +66,9 @@ public:
     /**
      * 写入该点的颜色值
      * @param out 重定向输出流，以免手动操作
+     * @param samples_per_pixel
      */
-    void write_color(std::ostream &out);
+    void write_color(std::ostream &out, int samples_per_pixel);
 
     /* 以下运算符重载暂不说明 */
 
