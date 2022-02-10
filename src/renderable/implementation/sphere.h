@@ -19,7 +19,12 @@ public:
      */
     double radius;
     /**
+<<<<<<< HEAD:src/renderable/implementation/sphere.h
      * 材质指针。
+=======
+     * 材质有关的指针。<p>
+     * 所有同一个材质的物体，共享一个指针。
+>>>>>>> 836a5bb20e42a60d3ea980aa9f5e125fbbce80a5:src/geometry/sphere.h
      */
     shared_ptr<material> material_ptr;
 
