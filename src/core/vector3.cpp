@@ -48,6 +48,10 @@ vector3 &vector3::operator/=(const double t) {
 
 void vector3::write_color(std::ostream &out, int samples_per_pixel) {
     auto scale = 1.0 / samples_per_pixel;
+    // 进行伽马修正
+//    auto r = sqrt(scale * e[0]);
+//    auto g = sqrt(scale * e[1]);
+//    auto b = sqrt(scale * e[2]);
     auto r = scale * e[0];
     auto g = scale * e[1];
     auto b = scale * e[2];

@@ -7,7 +7,7 @@
 sphere::sphere() {
     this->radius = 0.0;
 }
-
+// TODO：想办法把这个该死的构造函数加上 shared_ptr<material> material_ptr，是一加上就会报错，说构造函数参数不对
 sphere::sphere(vector3 cen, double r) : center(cen), radius(r) {}
 
 bool sphere::hit(const ray &r, double t_min, double t_max, hit_record &rec) const {
@@ -38,6 +38,7 @@ bool sphere::hit(const ray &r, double t_min, double t_max, hit_record &rec) cons
 //    rec.normal = (rec.p - center) / radius;
     vector3 outward_normal = (rec.p - center) / radius;
     rec.set_face_normal(r, outward_normal);
+    rec.material_ptr = material_ptr;
 
     return true;
 }

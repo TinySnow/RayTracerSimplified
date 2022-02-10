@@ -5,8 +5,8 @@
 #ifndef RAYTRACERSIMPLIFIED_SPHERE_H
 #define RAYTRACERSIMPLIFIED_SPHERE_H
 
-#include "../core/renderable.h"
-#include "../core/vector3.h"
+#include "../renderable.h"
+#include "../../core/vector3.h"
 
 class sphere : public renderable {
 public:
@@ -18,6 +18,10 @@ public:
      * 球体半径值。
      */
     double radius;
+    /**
+     * 材质指针。
+     */
+    shared_ptr<material> material_ptr;
 
 public:
     /**
@@ -30,6 +34,7 @@ public:
      * @param cen 球体球心坐标点
      * @param r 球体半径值
      */
+     // TODO：此构造函数需要 shared_ptr<material> material_ptr 参数，但是一加上就会报错
     sphere(vector3 cen, double r);
 
     /**

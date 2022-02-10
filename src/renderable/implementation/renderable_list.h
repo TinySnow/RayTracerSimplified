@@ -7,7 +7,7 @@
 #ifndef RAYTRACERSIMPLIFIED_RENDERABLE_LIST_H
 #define RAYTRACERSIMPLIFIED_RENDERABLE_LIST_H
 
-#include "renderable.h"
+#include "../renderable.h"
 
 #include <memory>
 #include <vector>
