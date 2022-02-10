@@ -19,12 +19,8 @@ public:
      */
     double radius;
     /**
-<<<<<<< HEAD:src/renderable/implementation/sphere.h
-     * 材质指针。
-=======
      * 材质有关的指针。<p>
      * 所有同一个材质的物体，共享一个指针。
->>>>>>> 836a5bb20e42a60d3ea980aa9f5e125fbbce80a5:src/geometry/sphere.h
      */
     shared_ptr<material> material_ptr;
 
@@ -40,7 +36,7 @@ public:
      * @param r 球体半径值
      */
      // TODO：此构造函数需要 shared_ptr<material> material_ptr 参数，但是一加上就会报错
-    sphere(vector3 cen, double r);
+    sphere(vector3 cen, double r, shared_ptr<material> m);
 
     /**
      * 继承自 renderable 的虚函数，用于计算光线和 renderable 对象是否击中。

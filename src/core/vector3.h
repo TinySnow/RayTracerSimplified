@@ -88,6 +88,15 @@ public:
         return {random_double(min, max), random_double(min, max), random_double(min, max)};
     }
 
+    /**
+     * 如果向量在各个维度上都非常接近于零，返回 true
+     * @return 见上
+     */
+    bool near_zero() const {
+        const auto s = 1e-8;
+        return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
+    }
+
     /* 以下运算符重载暂不说明 */
 
     vector3 operator-() const;
@@ -178,6 +187,33 @@ inline vector3 unit_vector(vector3 v) {
  * 此函数用于从相切的单位圆内选出一点，作为漫反射的目的点
  * @return 返回该目标点
  */
-vector3 random_in_unit_sphere();
+inline vector3 random_in_unit_sphere() {
+    while (true) {
+        // 受限于区间内的坐标点
+        auto p = vector3::random(-1, 1);
+        // 如果长度大于 1，说明不在单位球内，重新生成
+        if (p.length_squared() >= 1) continue;
+        return p;
+    }
+}
+
+/**
+ * 生成随机单位向量
+ * @return 随机单位向量
+ */
+inline vector3 random_unit_vector() {
+    return unit_vector(random_in_unit_sphere());
+}
+
+/**
+ * 根据反射模型得出反射公式
+ * @param v
+ * @param n
+ * @return
+ */
+inline vector3 reflect(const vector3 &v, const vector3 &n) {
+    return v - 2 * dot(v, n) * n;
+}
+
 
 #endif //RAYTRACERSIMPLIFIED_VECTOR3_H

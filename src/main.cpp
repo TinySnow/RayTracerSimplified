@@ -4,6 +4,9 @@
 #include "renderable/implementation/renderable_list.h"
 #include "renderable/implementation/sphere.h"
 #include "core/camera.h"
+#include "material/material.h"
+#include "material/implementation/lambertian.h"
+#include "material/implementation/metal.h"
 
 /**
  * 根据直线与球在直角坐标系中的方程，联立求解得到的式子：<p>
@@ -85,10 +88,15 @@ color ray_color(const ray &r, const renderable &world, int depth) {
     };
 
     if (world.hit(r, 0.001, infinity, rec)) {
-//        return 0.5 * (rec.normal + color(1, 1, 1));
-        point3 target = rec.p + rec.normal + random_in_unit_sphere();
-        // 请注意，此处开始递归计算
-        return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
+////        return 0.5 * (rec.normal + color(1, 1, 1));
+//        point3 target = rec.p + rec.normal + random_unit_vector();
+//        // 请注意，此处开始递归计算
+//        return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
+        ray scattered;
+        color attenuation;
+        if (rec.material_ptr->scatter(r, rec, attenuation, scattered))
+            return attenuation * ray_color(scattered, world, depth-1);
+        return {0,0,0};
     }
     vector3 unit_direction = unit_vector(r.get_direction());
     auto t = 0.5 * (unit_direction.y() + 1.0);
@@ -101,8 +109,15 @@ int main() {
 
     // 为场景添加需要渲染的几何体
     renderable_list world;
-    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
-    world.add(make_shared<sphere>(point3(0, -100.5, -1), 100));
+    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
+    auto material_center = make_shared<lambertian>(color(0.7, 0.3, 0.3));
+    auto material_left   = make_shared<metal>(color(0.8, 0.8, 0.8));
+    auto material_right  = make_shared<metal>(color(0.8, 0.6, 0.2));
+
+    world.add(make_shared<sphere>(point3( 0.0, -100.5, -1.0), 100.0, material_ground));
+    world.add(make_shared<sphere>(point3( 0.0,    0.0, -1.0),   0.5, material_center));
+    world.add(make_shared<sphere>(point3(-1.0,    0.0, -1.0),   0.5, material_left));
+    world.add(make_shared<sphere>(point3( 1.0,    0.0, -1.0),   0.5, material_right));
 
 
     // 定义图像分辨率，不选取正方形是因为会搞混长和宽
