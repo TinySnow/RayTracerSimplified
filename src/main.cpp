@@ -7,6 +7,7 @@
 #include "material/material.h"
 #include "material/implementation/lambertian.h"
 #include "material/implementation/metal.h"
+#include "material/implementation/dielectric.h"
 
 /**
  * 根据直线与球在直角坐标系中的方程，联立求解得到的式子：<p>
@@ -111,8 +112,8 @@ int main() {
     renderable_list world;
     auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
     auto material_center = make_shared<lambertian>(color(0.7, 0.3, 0.3));
-    auto material_left   = make_shared<metal>(color(0.8, 0.8, 0.8));
-    auto material_right  = make_shared<metal>(color(0.8, 0.6, 0.2));
+    auto material_left   = make_shared<dielectric>(1.5);
+    auto material_right  = make_shared<metal>(color(0.8, 0.6, 0.2), 1.0);
 
     world.add(make_shared<sphere>(point3( 0.0, -100.5, -1.0), 100.0, material_ground));
     world.add(make_shared<sphere>(point3( 0.0,    0.0, -1.0),   0.5, material_center));

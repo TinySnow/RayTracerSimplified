@@ -215,5 +215,22 @@ inline vector3 reflect(const vector3 &v, const vector3 &n) {
     return v - 2 * dot(v, n) * n;
 }
 
+/**
+ * 根据折射模型算出来的折射光线向量方程。
+ * @param uv unit_vector 入射光线的单位向量
+ * @param n 入射面的法线单位向量
+ * @param refractive_index_ratio 折射率之比，入射面折射率比上折射面折射率
+ * @return
+ */
+inline vector3 refract(const vector3 &uv, const vector3 &n, double refractive_index_ratio) {
+    // 计算入射角的余弦值，取最小值，因为余弦值不可能大于 1
+    auto cos_theta = fmin(dot(-uv, n), 1.0);
+    // 计算折射平面（即垂直于法线向量的那个平面）的折射光线水平分量
+    vector3 r_out_horizontal = refractive_index_ratio * (uv + cos_theta * n);
+    // 计算折射平面的折射光线垂直分量
+    vector3 r_out_vertical = -sqrt(fabs(1.0 - r_out_horizontal.length_squared())) * n;
+    return r_out_horizontal + r_out_vertical;
+}
+
 
 #endif //RAYTRACERSIMPLIFIED_VECTOR3_H
