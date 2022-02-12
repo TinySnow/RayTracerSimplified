@@ -17,6 +17,16 @@ public:
      */
     double refractive_index_ratio;
 
+private:
+    /**
+     * 现实世界中的玻璃, 发生折射的概率会随着入射角而改变。<p>
+     * 此处就是利用 Christophe Schlick 提出的近似等式计算其发生折射的概率。
+     * @param cosine 入射角余弦值
+     * @param ref_idx 折射率
+     * @return 折射的概率
+     */
+    static double reflectance(double cosine, double ref_idx);
+
 public:
     /**
      * 满参构造函数。
