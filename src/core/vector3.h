@@ -231,6 +231,16 @@ inline vector3 refract(const vector3 &uv, const vector3 &n, double refractive_in
     vector3 r_out_vertical = -sqrt(fabs(1.0 - r_out_horizontal.length_squared())) * n;
     return r_out_horizontal + r_out_vertical;
 }
-
+/**
+ * 从单位圆（即一个单位圆盘）内随机生成一点
+ * @return 返回该点
+ */
+inline vector3 random_in_unit_disk() {
+    while (true) {
+        auto p = vector3(random_double(-1, 1), random_double(-1, 1), 0);
+        if (p.length_squared() >= 1) continue;
+        return p;
+    }
+}
 
 #endif //RAYTRACERSIMPLIFIED_VECTOR3_H
