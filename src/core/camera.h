@@ -4,6 +4,7 @@
 
 #ifndef RAYTRACERSIMPLIFIED_CAMERA_H
 #define RAYTRACERSIMPLIFIED_CAMERA_H
+
 #include "vector3.h"
 #include "ray.h"
 
@@ -35,10 +36,24 @@ public:
      * <b>注意：</b>
      * 第一个参数垂直视野高度不能超过 180 度，因为摄像机的视锥，上下母线之夹角不会超过 180 度，
      * 这个角度就是此时的第一个参数，第一个参数是以角度的形式传入的。<p>
-     * @param vertical_fov vertical_filed_of_view，垂直视野高度，用角度表示
+     * @param vertical_fov vertical_field_of_view，垂直视野高度，用角度表示
      * @param aspect_ratio 分辨率，即长宽比，由上面的高度确定水平视野宽度
      */
-    camera(double vertical_fov,double aspect_ratio);
+//    camera(double vertical_fov,double aspect_ratio);
+
+    /**
+     * 特定参数构造函数，返回相机。<p>
+     * <b>注意：</b>
+     * 第一个参数垂直视野高度不能超过 180 度，因为摄像机的视锥，上下母线之夹角不会超过 180 度，
+     * 这个角度就是此时的第一个参数，第一个参数是以角度的形式传入的。<p>
+     * @param look_from 摄像机所在的点
+     * @param look_at 摄像机看向的点，与上面这个变量联立，确定摄像机所在视线的向量方程
+     * @param up_vector 用于指定摄像机正上方向的向量方程
+     * @param vertical_fov vertical_field_of_view，垂直视野高度，用角度表示
+     * @param aspect_ratio 分辨率，即长宽比，由上面的高度确定水平视野宽度
+     */
+    camera(point3 look_from, point3 look_at, vector3 up_vector, double vertical_fov, double aspect_ratio);
+
     ray get_ray(double u, double v) const;
 };
 
