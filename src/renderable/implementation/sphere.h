@@ -34,8 +34,8 @@ public:
      * 满参构造函数。
      * @param cen 球体球心坐标点
      * @param r 球体半径值
+     * @param m 表面材质，决定如何散射
      */
-     // TODO：此构造函数需要 shared_ptr<material> material_ptr 参数，但是一加上就会报错
     sphere(vector3 cen, double r, shared_ptr<material> m);
 
     /**
