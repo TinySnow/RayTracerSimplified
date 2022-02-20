@@ -134,7 +134,7 @@ int main() {
 
 //    camera camera;
 //    camera camera(90.0, aspect_ratio);
-    camera camera(point3(-2, 2, 1), point3(0, 0, -1), vector3(0, 1, 0), 90, aspect_ratio);
+    camera camera(point3(-5,1,3), point3(0,0,-1), vector3(0,1,0), 20, aspect_ratio);
 
     // ‰÷»æ
     std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
