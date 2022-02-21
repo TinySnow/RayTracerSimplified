@@ -8,6 +8,7 @@
 #include "material/implementation/lambertian.h"
 #include "material/implementation/metal.h"
 #include "material/implementation/dielectric.h"
+#include "purpose/scene.h"
 
 /**
  * 根据直线与球在直角坐标系中的方程，联立求解得到的式子：<p>
@@ -109,26 +110,27 @@ int main() {
     freopen("../src/image.ppm", "w", stdout);
 
     // 为场景添加需要渲染的几何体
-    renderable_list world;
-    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
-    auto material_center = make_shared<lambertian>(color(0.1, 0.2, 0.5));
-    auto material_left = make_shared<dielectric>(1.5);
-    auto material_right = make_shared<metal>(color(0.8, 0.6, 0.2), 0.0);
-    world.add(make_shared<sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
-    world.add(make_shared<sphere>(point3(0.0, 0.0, -1.0), 0.5, material_center));
-    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
-    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), -0.4, material_left));
-    world.add(make_shared<sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
+//    renderable_list world;
+//    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
+//    auto material_center = make_shared<lambertian>(color(0.1, 0.2, 0.5));
+//    auto material_left = make_shared<dielectric>(1.5);
+//    auto material_right = make_shared<metal>(color(0.8, 0.6, 0.2), 0.0);
+//    world.add(make_shared<sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
+//    world.add(make_shared<sphere>(point3(0.0, 0.0, -1.0), 0.5, material_center));
+//    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
+//    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), -0.4, material_left));
+//    world.add(make_shared<sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
 
+    auto world = random_scene();
 
     // 定义图像分辨率，不选取正方形是因为会搞混长和宽
-    const auto aspect_ratio = 16.0 / 9.0;
+    const auto aspect_ratio = 3.0 / 2.0;
     // 定义图像高度
-    const int image_height = 450;
+    const int image_height = 800;
     // 定义图像宽度
     const int image_width = static_cast<int>(image_height * aspect_ratio);
 
-    const int samples_per_pixel = 100;
+    const int samples_per_pixel = 500;
     // 限定递归最大深度
     const int max_depth = 50;
 
@@ -136,11 +138,11 @@ int main() {
 //    camera camera(90.0, aspect_ratio);
 //    camera camera(point3(-2,2,1), point3(0,0,-1), vector3(0,1,0), 20, aspect_ratio);
 
-    point3 look_from(3,3,2);
-    point3 look_at(0,0,-1);
+    point3 look_from(18,7,5);
+    point3 look_at(0,0,0);
     vector3 up_vector(0,1,0);
-    auto dist_to_focus = (look_from-look_at).length();
-    auto aperture = 2.0;
+    auto dist_to_focus = 10.0;
+    auto aperture = 4;
 
     camera camera(look_from, look_at, up_vector, 20, aspect_ratio, aperture, dist_to_focus);
 
