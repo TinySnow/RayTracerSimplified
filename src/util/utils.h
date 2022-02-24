@@ -37,11 +37,20 @@ inline double degrees_to_radians(double degrees) {
  * 生成随机数
  * @return 随机数
  */
+//inline double random_double() {
+//    static std::uniform_real_distribution<double> distribution(0.0, 1.0);
+//    static std::mt19937 generator;
+//    return distribution(generator);
+//}
+
+/**
+ * 生成随机数
+ * @return 随机数
+ */
 inline double random_double() {
-    static std::uniform_real_distribution<double> distribution(0.0, 1.0);
-    static std::mt19937 generator;
-    return distribution(generator);
+    return rand() / (RAND_MAX + 1.0);
 }
+
 /**
  * 生成在区间范围内的随机数
  * @param min 区间下限
@@ -49,10 +58,20 @@ inline double random_double() {
  * @return 随机数
  */
 inline double random_double(double min, double max) {
-    static std::uniform_real_distribution<double> distribution(min, max);
-    static std::mt19937 generator;
-    return distribution(generator);
+    return min + (max - min) * random_double();
 }
+
+/**
+ * 生成在区间范围内的随机数
+ * @param min 区间下限
+ * @param max 区间上限
+ * @return 随机数
+ */
+//inline double random_double(double min, double max) {
+//    static std::uniform_real_distribution<double> distribution(min, max);
+//    static std::mt19937 generator;
+//    return distribution(generator);
+//}
 
 /**
  * 将 x 的值限制在区间范围内
