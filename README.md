@@ -252,7 +252,7 @@ Includes aperture, fov(field of view, based on height calculating), distance to 
 
 ![image_final_scene_another_10_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters.3n01qeggj8sg.webp)
 
-<p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters</p>
+<p style="text-align: center; font-style: italic;">Following picture based: image_final_scene_another_10_rays_10_scatters</p>
 
 ![image_final_scene_another_10_rays_10_scatters_no_aperture](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_no_aperture.60uxjhn0imm8.webp)
 
