@@ -298,6 +298,64 @@ Includes aperture, fov(field of view, based on height calculating), distance to 
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_huge(90)_fov</p>
 
+## Evolutions Pictures/演进过程渲染图
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.6chlmfz6n6rk.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.1.0_hello_world
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.g5u8n9uod2w.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.2.0_vector_model_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.1ccnv2vsxau8.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.3.0_rays_and_camera_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.kt4oxitvl6o.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.4.0_multiobjects_can_be_rendered</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.7lxy7l65hj4.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.4.1_antialiasing_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.49bbfh2rcncw.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.4.2_diffuse_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.5yzz54rjb6gw.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.4.3_material_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.btvffqbcwvk.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.4.4_gamma_corrected</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.72qqdydnsek.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.5.0_probability_of_refraction_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.yg64r8wmunk.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.5.1_custom_wide-angle_lens_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.2h9omy4be0g0.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.5.1_depth_of_field</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.252xfopwhts0.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.5.2_custom_camera_position_added</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.4yb2xpjlo2rk.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.5.2_camera_position_changed_A</p>
+
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.qc4jfcn52y8.webp)
+
+<p style="text-align: center; font-style: italic;">image_v0.5.2_camera_position_changed_B</p>
+
 ## Reference/参考
 
 [Ray Tracing in One Weekend](https://github.com/RayTracing/raytracing.github.io/)
