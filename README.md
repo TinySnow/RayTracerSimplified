@@ -302,51 +302,51 @@ Includes aperture, fov(field of view, based on height calculating), distance to 
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.6chlmfz6n6rk.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.1.0_hello_world
+<p style="text-align: center; font-style: italic;">image_v0.1.0_hello_world（初始化图片）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.g5u8n9uod2w.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.2.0_vector_model_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.2.0_vector_model_added（添加向量模型）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.1ccnv2vsxau8.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.3.0_rays_and_camera_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.3.0_rays_and_camera_added（添加光线和摄像机类）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.kt4oxitvl6o.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.4.0_multiobjects_can_be_rendered</p>
+<p style="text-align: center; font-style: italic;">image_v0.4.0_multiobjects_can_be_rendered（可以渲染多个物体）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.7lxy7l65hj4.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.4.1_antialiasing_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.4.1_antialiasing_added（添加抗锯齿）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.49bbfh2rcncw.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.4.2_diffuse_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.4.2_diffuse_added（添加漫反射）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.5yzz54rjb6gw.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.4.3_material_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.4.3_material_added（添加材质）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.btvffqbcwvk.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.4.4_gamma_corrected</p>
+<p style="text-align: center; font-style: italic;">image_v0.4.4_gamma_corrected（进行伽马矫正）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.72qqdydnsek.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.5.0_probability_of_refraction_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.5.0_probability_of_refraction_added（添加折射发生概率）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.yg64r8wmunk.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.5.1_custom_wide-angle_lens_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.5.1_custom_wide-angle_lens_added（添加自定义镜头角度摄像机）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.2h9omy4be0g0.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.5.1_depth_of_field</p>
+<p style="text-align: center; font-style: italic;">image_v0.5.1_depth_of_field（添加景深）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.252xfopwhts0.webp)
 
-<p style="text-align: center; font-style: italic;">image_v0.5.2_custom_camera_position_added</p>
+<p style="text-align: center; font-style: italic;">image_v0.5.2_custom_camera_position_added（摄像机可自定义位置）</p>
 
 ![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.4yb2xpjlo2rk.webp)
 
