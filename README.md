@@ -134,27 +134,27 @@ This source code **DIDN'T** implement:
 
 ### Final Scene/最终场景
 
-![image_final_scene_show_A](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_show_A.40rtbh4y296o.webp)
+![image_final_scene_show_A](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_show_A.40rtbh4y296o.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_show_A</p>
 
-![image_final_scene_show_B](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_show_B.42h5o3mk89mo.webp)
+![image_final_scene_show_B](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_show_B.42h5o3mk89mo.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_show_B</p>
 
-![image_final_scene_show_C](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_show_C.1sxjuyfiwvuo.webp)
+![image_final_scene_show_C](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_show_C.1sxjuyfiwvuo.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_show_C</p>
 
-![image_final_scene_show_D](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_show_D.30qcr2tmn4g0.webp)
+![image_final_scene_show_D](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_show_D.30qcr2tmn4g0.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_show_D</p>
 
-![image_final_scene_show_E](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_show_E.49afiznb37wg.webp)
+![image_final_scene_show_E](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_show_E.49afiznb37wg.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_show_E</p>
 
-![image_final_scene_show_F](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_show_F.2t4q0p2f6h4w.webp)
+![image_final_scene_show_F](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_show_F.2t4q0p2f6h4w.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_show_F</p>
 
@@ -176,59 +176,59 @@ Note: Scattering includes reflection and refraction。
 
 #### Pictures/图片
 
-![image_final_scene_1_rays_1_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_1_scatters.l9o7av9ka4g.webp)
+![image_final_scene_1_rays_1_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_1_scatters.l9o7av9ka4g.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_1_scatters</p>
 
-![image_final_scene_1_rays_2_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_2_scatters.67mq88m09aps.webp)
+![image_final_scene_1_rays_2_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_2_scatters.67mq88m09aps.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_2_scatters</p>
 
-![image_final_scene_1_rays_3_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_3_scatters.1fz11uwy98hs.webp)
+![image_final_scene_1_rays_3_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_3_scatters.1fz11uwy98hs.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_3_scatters</p>
 
-![image_final_scene_1_rays_4_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_4_scatters.i1ojhks5exc.webp)
+![image_final_scene_1_rays_4_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_4_scatters.i1ojhks5exc.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_4_scatters</p>
 
-![image_final_scene_1_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_5_scatters.2jix0nsqp9s0.webp)
+![image_final_scene_1_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_5_scatters.2jix0nsqp9s0.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_5_scatters</p>
 
-![image_final_scene_1_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_10_scatters.3xb5q1fdkjk0.webp)
+![image_final_scene_1_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_10_scatters.3xb5q1fdkjk0.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_10_scatters</p>
 
-![image_final_scene_1_rays_25_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_25_scatters.1vaixtp6wu3k.webp)
+![image_final_scene_1_rays_25_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_25_scatters.1vaixtp6wu3k.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_25_scatters</p>
 
-![image_final_scene_1_rays_50_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_1_rays_50_scatters.54su2azh181s.webp)
+![image_final_scene_1_rays_50_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_1_rays_50_scatters.54su2azh181s.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_1_rays_50_scatters</p>
 
-![image_final_scene_5_rays_1_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_5_rays_1_scatters.ndaja5tu85c.webp)
+![image_final_scene_5_rays_1_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_5_rays_1_scatters.ndaja5tu85c.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_5_rays_1_scatters</p>
 
-![image_final_scene_5_rays_2_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_5_rays_2_scatters.3pvmrfqm6l1c.webp)
+![image_final_scene_5_rays_2_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_5_rays_2_scatters.3pvmrfqm6l1c.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_5_rays_2_scatters</p>
 
-![image_final_scene_5_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_5_rays_5_scatters.6516rcuyzqm8.webp)
+![image_final_scene_5_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_5_rays_5_scatters.6516rcuyzqm8.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_5_rays_5_scatters</p>
 
-![image_final_scene_10_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_10_rays_5_scatters.5tf7ho2tif0g.webp)
+![image_final_scene_10_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_10_rays_5_scatters.5tf7ho2tif0g.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_10_rays_5_scatters</p>
 
-![image_final_scene_test_100_rays](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_test_100_rays.1wsacj2lwbxc.webp)
+![image_final_scene_test_100_rays](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_test_100_rays.1wsacj2lwbxc.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_test_100_rays</p>
 
-![image_final_scene_test_500_rays](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_test_500_rays.3akennxopow.webp)
+![image_final_scene_test_500_rays](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_test_500_rays.3akennxopow.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_test_500_rays</p>
 
@@ -244,117 +244,117 @@ Includes aperture, fov(field of view, based on height calculating), distance to 
 
 #### Pictures/图片
 
-![image_final_scene_another_5_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_5_rays_5_scatters.307qswt4zrcw.webp)
+![image_final_scene_another_5_rays_5_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_5_rays_5_scatters.307qswt4zrcw.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_5_rays_5_scatters</p>
 
-![image_final_scene_another_50_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_50_rays_10_scatters.1srqq0689gcg.webp)
+![image_final_scene_another_50_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_50_rays_10_scatters.1srqq0689gcg.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_50_rays_10_scatters</p>
 
-![image_final_scene_another_10_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters.3n01qeggj8sg.webp)
+![image_final_scene_another_10_rays_10_scatters](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters.3n01qeggj8sg.webp)
 
 <p style="text-align: center; font-style: italic;">Following picture based: image_final_scene_another_10_rays_10_scatters</p>
 
-![image_final_scene_another_10_rays_10_scatters_no_aperture](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_no_aperture.60uxjhn0imm8.webp)
+![image_final_scene_another_10_rays_10_scatters_no_aperture](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_no_aperture.60uxjhn0imm8.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_no_aperture</p>
 
-![image_final_scene_another_10_rays_10_scatters_normal](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_normal%280.436k7b9ilny8.webp)
+![image_final_scene_another_10_rays_10_scatters_normal](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_normal%280.436k7b9ilny8.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_normal(0.1)_aperture</p>
 
-![image_final_scene_another_10_rays_10_scatters_big(0)](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_big%280.31r6gz3qp6v4.webp)
+![image_final_scene_another_10_rays_10_scatters_big(0)](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_big%280.31r6gz3qp6v4.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_big(0.5)_aperture</p>
 
-![image_final_scene_another_10_rays_10_scatters_huge(1)](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_huge%281.4wk9ey08e1ds.webp)
+![image_final_scene_another_10_rays_10_scatters_huge(1)](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_huge%281.4wk9ey08e1ds.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_huge(1.0)_aperture</p>
 
-![image_final_scene_another_10_rays_10_scatters_short(4)_focus](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_short(4)_focus.51vobipugscg.webp)
+![image_final_scene_another_10_rays_10_scatters_short(4)_focus](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_short(4)_focus.51vobipugscg.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_short(4)_focus</p>
 
-![image_final_scene_another_10_rays_10_scatters_long(50)_focus](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_long(50)_focus.7174hb1gyyyo.webp)
+![image_final_scene_another_10_rays_10_scatters_long(50)_focus](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_long(50)_focus.7174hb1gyyyo.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_long(50)_focus</p>
 
-![image_final_scene_another_10_rays_10_scatters_no_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_no_fov.31pdtdezt9g.webp)
+![image_final_scene_another_10_rays_10_scatters_no_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_no_fov.31pdtdezt9g.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_no_fov</p>
 
-![image_final_scene_another_10_rays_10_scatters_tiny(5)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_tiny(5)_fov.3kwtkuwrhq2o.webp)
+![image_final_scene_another_10_rays_10_scatters_tiny(5)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_tiny(5)_fov.3kwtkuwrhq2o.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_tiny(5)_fov</p>
 
-![image_final_scene_another_10_rays_10_scatters_little(10)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_little(10)_fov.3kdpwn7oszr4.webp)
+![image_final_scene_another_10_rays_10_scatters_little(10)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_little(10)_fov.3kdpwn7oszr4.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_little(10)_fov</p>
 
-![image_final_scene_another_10_rays_10_scatters_normal(30)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_normal(30)_fov.41i7as52ifcw.webp)
+![image_final_scene_another_10_rays_10_scatters_normal(30)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_normal(30)_fov.41i7as52ifcw.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_normal(30)_fov</p>
 
-![image_final_scene_another_10_rays_10_scatters_huge(90)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_final_scene_another_10_rays_10_scatters_huge(90)_fov.3a4vg0s9cbuo.webp)
+![image_final_scene_another_10_rays_10_scatters_huge(90)_fov](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_final_scene_another_10_rays_10_scatters_huge(90)_fov.3a4vg0s9cbuo.webp)
 
 <p style="text-align: center; font-style: italic;">image_final_scene_another_10_rays_10_scatters_huge(90)_fov</p>
 
 ## Evolutions Pictures/演进过程渲染图
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.6chlmfz6n6rk.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.6chlmfz6n6rk.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.1.0_hello_world（初始化图片）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.g5u8n9uod2w.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.g5u8n9uod2w.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.2.0_vector_model_added（添加向量模型）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.1ccnv2vsxau8.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.1ccnv2vsxau8.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.3.0_rays_and_camera_added（添加光线和摄像机类）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.kt4oxitvl6o.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.kt4oxitvl6o.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.4.0_multiobjects_can_be_rendered（可以渲染多个物体）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.7lxy7l65hj4.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.7lxy7l65hj4.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.4.1_antialiasing_added（添加抗锯齿）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.49bbfh2rcncw.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.49bbfh2rcncw.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.4.2_diffuse_added（添加漫反射）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.5yzz54rjb6gw.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.5yzz54rjb6gw.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.4.3_material_added（添加材质）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.btvffqbcwvk.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.btvffqbcwvk.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.4.4_gamma_corrected（进行伽马矫正）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.72qqdydnsek.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.72qqdydnsek.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.5.0_probability_of_refraction_added（添加折射发生概率）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.yg64r8wmunk.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.yg64r8wmunk.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.5.1_custom_wide-angle_lens_added（添加自定义镜头角度摄像机）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.2h9omy4be0g0.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.2h9omy4be0g0.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.5.1_depth_of_field（添加景深）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.252xfopwhts0.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.252xfopwhts0.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.5.2_custom_camera_position_added（摄像机可自定义位置）</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.4yb2xpjlo2rk.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.4yb2xpjlo2rk.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.5.2_camera_position_changed_A</p>
 
-![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/RayTracer/image_v0.qc4jfcn52y8.webp)
+![image_v0](https://cdn.jsdelivr.net/gh/TinySnow/GithubImageHosting@main/Technology/RayTracer/image_v0.qc4jfcn52y8.webp)
 
 <p style="text-align: center; font-style: italic;">image_v0.5.2_camera_position_changed_B</p>
 
